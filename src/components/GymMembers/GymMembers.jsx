@@ -1,0 +1,178 @@
+import { data } from 'autoprefixer';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+
+// const GymMembers = () => {
+    // const [memberinfo, setMemberInfo] = useState([]);
+    // useEffect(() => {
+        // fetch('members_info.json')
+        // .then(res=>res.json())
+        // .then(data=>setMemberInfo(data))
+
+
+        // axios.get('members_info.json')
+        //     // .then(data=>console.log(data));
+        //     .then(data => {
+        //         const loadedData = data.data;
+        //         // console.log(loadedData);
+        //         const memberInfo = {
+        //             name: loadedData.name,
+        //             body_fat_percentage: loadedData.body_fat_percentage
+        //         }
+        //         return memberInfo;
+
+        //     });
+
+//     })
+//     return (
+        
+//     );
+// };
+
+// export default GymMembers;
+
+
+
+const GymMembers = () => {
+
+    const memberInfo = [
+        {
+            "id": 1,
+            "name": "John Doe",
+            "age": 28,
+            "gender": "Male",
+            "weight_kg": 75.5,
+            "height_cm": 180,
+            "body_fat_percentage": 15.2,
+            "favorite_workout": "Strength Training"
+        },
+        {
+            "id": 2,
+            "name": "Jane Smith",
+            "age": 32,
+            "gender": "Female",
+            "weight_kg": 63.0,
+            "height_cm": 165,
+            "body_fat_percentage": 18.5,
+            "favorite_workout": "Cardiovascular Training"
+        },
+        {
+            "id": 3,
+            "name": "Mike Johnson",
+            "age": 24,
+            "gender": "Male",
+            "weight_kg": 80.2,
+            "height_cm": 175,
+            "body_fat_percentage": 12.8,
+            "favorite_workout": "CrossFit"
+        },
+        {
+            "id": 4,
+            "name": "Emily Brown",
+            "age": 29,
+            "gender": "Female",
+            "weight_kg": 68.7,
+            "height_cm": 160,
+            "body_fat_percentage": 21.0,
+            "favorite_workout": "Yoga"
+        },
+        {
+            "id": 5,
+            "name": "Chris Wilson",
+            "age": 35,
+            "gender": "Male",
+            "weight_kg": 90.1,
+            "height_cm": 185,
+            "body_fat_percentage": 14.6,
+            "favorite_workout": "Weightlifting"
+        },
+        {
+            "id": 6,
+            "name": "Sarah Taylor",
+            "age": 27,
+            "gender": "Female",
+            "weight_kg": 62.3,
+            "height_cm": 170,
+            "body_fat_percentage": 19.3,
+            "favorite_workout": "Pilates"
+        },
+        {
+            "id": 7,
+            "name": "David Anderson",
+            "age": 30,
+            "gender": "Male",
+            "weight_kg": 88.0,
+            "height_cm": 178,
+            "body_fat_percentage": 16.5,
+            "favorite_workout": "Functional Training"
+        },
+        {
+            "id": 8,
+            "name": "Lisa Clark",
+            "age": 31,
+            "gender": "Female",
+            "weight_kg": 67.8,
+            "height_cm": 162,
+            "body_fat_percentage": 20.2,
+            "favorite_workout": "Aerobics"
+        },
+        {
+            "id": 9,
+            "name": "Alex Hernandez",
+            "age": 26,
+            "gender": "Male",
+            "weight_kg": 79.4,
+            "height_cm": 173,
+            "body_fat_percentage": 14.0,
+            "favorite_workout": "Martial Arts"
+        },
+        {
+            "id": 10,
+            "name": "Olivia Garcia",
+            "age": 28,
+            "gender": "Female",
+            "weight_kg": 64.5,
+            "height_cm": 167,
+            "body_fat_percentage": 17.8,
+            "favorite_workout": "Swimming"
+        },
+        {
+            "id": 11,
+            "name": "Daniel Martinez",
+            "age": 33,
+            "gender": "Male",
+            "weight_kg": 85.9,
+            "height_cm": 181,
+            "body_fat_percentage": 13.4,
+            "favorite_workout": "Cycling"
+        },
+        {
+            "id": 12,
+            "name": "Sophia Rodriguez",
+            "age": 25,
+            "gender": "Female",
+            "weight_kg": 60.7,
+            "height_cm": 163,
+            "body_fat_percentage": 22.3,
+            "favorite_workout": "Functional Training"
+        }
+    ];
+
+    return (
+            <div>
+            <h3 className='text-center font-bold text-purple-400 text-2xl'>Body Fat Percentage of Our Members</h3>
+                <BarChart width={1350} height={400} data={memberInfo}>
+                    <Bar dataKey="body_fat_percentage" fill="skyblue" />
+                    <XAxis dataKey="name" />
+                    <YAxis dataKey={"body_fat_percentage"}/>
+                    <Tooltip />
+                    <Legend />
+                </BarChart>
+            
+        </div>
+        
+    );
+};
+
+export default GymMembers;

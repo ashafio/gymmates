@@ -1,0 +1,39 @@
+[
+    {
+      "id": 1,
+      "name": "Basic Plan",
+      "price": 30,
+      "features": [
+        "Gym access (regular hours)",
+        "Cardio & strength equipment",
+        "Locker room access",
+        "Discounted classes",
+        "24/7 gym access"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Premium Plan",
+      "price": 50,
+      "features": [
+        "24/7 gym access",
+        "All fitness classes",
+        "Personalized workouts",
+        "Sauna & spa access",
+        "Free monthly training"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Family Plan",
+      "price": 80,
+      "features": [
+        "Access for up to 4 members",
+        "All facilities & equipment",
+        "Family fitness classes",
+        "Childcare services",
+        "Parking Stop"
+      ]
+    }
+  ]
+  
