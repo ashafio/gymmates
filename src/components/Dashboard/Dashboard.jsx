@@ -107,7 +107,7 @@ const Dashboard = () => {
             <XAxis dataKey="name"/>
             <YAxis/>
             <Tooltip />
-            <Legend />
+            {/* <Legend /> */}
             </LineChart>
         </div>
     );

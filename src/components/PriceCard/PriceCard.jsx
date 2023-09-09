@@ -1,6 +1,10 @@
 import React from 'react';
 import Feature from '../Feature/Feature';
 const PriceCard = ({price}) => {
+    
+        const shoot = () => {
+          alert(`Great! You are now a ${price.name} member.Enjoy your journey with GymMates :)`);
+        }
     return (
         <div className='bg-purple-300 rounded-md m-4 p-2 flex flex-col'>
             <h2 className='text-center'>
@@ -17,7 +21,7 @@ const PriceCard = ({price}) => {
                 key={idx}
                 ></Feature>)
             }
-            <button className='md:mt-auto w-full font-bold bg-cyan-500 py-2 rounded-md text-white hover:bg-cyan-600'>Buy Now</button>
+            <button onClick={shoot} className='md:mt-auto w-full font-bold bg-cyan-500 py-2 rounded-md text-white hover:bg-cyan-600'>Buy Now</button>
             </div>
         </div>
     );
